@@ -1,18 +1,18 @@
 package de.andrena.eclipse.filesearch.ui;
 
-import org.eclipse.core.resources.IFile;
 import org.eclipse.jface.viewers.ITreeContentProvider;
 import org.eclipse.jface.viewers.Viewer;
 
 import de.andrena.eclipse.filesearch.core.FileNode;
+import de.andrena.eclipse.filesearch.core.SearchFilenameRecursiveRoot;
 
 final class SearchFilenameRecursiveResultContentProvider implements ITreeContentProvider {
 
-	private FileNode root;
+	private SearchFilenameRecursiveRoot root;
 
 	@Override
 	public Object[] getElements(Object inputElement) {
-		return new Object[] { root };
+		return new Object[] { root.getRootNode() };
 	}
 
 	@Override
@@ -31,8 +31,8 @@ final class SearchFilenameRecursiveResultContentProvider implements ITreeContent
 
 	@Override
 	public Object getParent(Object element) {
-		if (element == root) {
-			return root.getFile();
+		if (element == root.getRootNode()) {
+			return root;
 		}
 		if (element instanceof FileNode) {
 			FileNode fileNode = (FileNode) element;
@@ -43,7 +43,7 @@ final class SearchFilenameRecursiveResultContentProvider implements ITreeContent
 
 	@Override
 	public void inputChanged(Viewer viewer, Object oldInput, Object newInput) {
-		root = new FileNode((IFile) newInput);
+		root = (SearchFilenameRecursiveRoot) newInput;
 	}
 
 	@Override

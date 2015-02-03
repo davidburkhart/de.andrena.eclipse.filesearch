@@ -26,6 +26,7 @@ import de.andrena.eclipse.filesearch.core.ElementsFrom;
 import de.andrena.eclipse.filesearch.core.FileNode;
 import de.andrena.eclipse.filesearch.core.SearchConfiguration;
 import de.andrena.eclipse.filesearch.core.SearchFilenameAndAddResultToUsers;
+import de.andrena.eclipse.filesearch.core.SearchFilenameRecursiveRoot;
 import de.andrena.eclipse.filesearch.core.SearchResultFoundNotifier;
 
 public class SearchFilenameRecursiveResultView extends ViewPart {
@@ -120,6 +121,8 @@ public class SearchFilenameRecursiveResultView extends ViewPart {
 	}
 
 	public void setInput(IFile file) {
-		treeViewer.setInput(file);
+		FileNode rootNode = new FileNode(file);
+		treeViewer.setInput(new SearchFilenameRecursiveRoot(rootNode));
+		runSearchOn(rootNode);
 	}
 }
