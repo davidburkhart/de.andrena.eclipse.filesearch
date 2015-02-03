@@ -55,5 +55,13 @@
             restorable="true">
       </view>
    </extension>
+   <extension
+         point="org.eclipse.ui.bindings">
+      <key
+            commandId="de.andrena.eclipse.filesearch.ui.SearchFilenameRecursive"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+            sequence="M1+R">
+      </key>
+   </extension>
 
 </plugin>
