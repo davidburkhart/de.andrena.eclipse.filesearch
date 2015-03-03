@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="de.andrena.eclipse.filesearch.feature"
+      label="Recursive Filesearch"
+      version="1.0.0.qualifier">
+
+   <description url="https://github.com/davidburkhart/de.andrena.eclipse.filesearch">
+      Search for filenames in other files. Create a result-tree for filenames similar to &quot;call hierarchy&quot; in Java.
+   </description>
+
+   <copyright>
+      Copyright (c) 2010 by projectusus.org contributors
+   </copyright>
+
+   <license url="http://www.eclipse.org/legal/epl-v10.html">
+      This software is made available under the terms of the Eclipse Public License, version 1.0 (EPL).
+A copy of the license text is provided with the software, or can be found at http://www.eclipse.org/legal/epl-v10.html.
+   </license>
+
+   <plugin
+         id="de.andrena.eclipse.filesearch"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+</feature>

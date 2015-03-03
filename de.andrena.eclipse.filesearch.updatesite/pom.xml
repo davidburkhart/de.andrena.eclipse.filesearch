@@ -9,10 +9,10 @@
 		<version>1.0.0-SNAPSHOT</version>
 		<relativePath>../de.andrena.eclipse.filesearch.build</relativePath>
 	</parent>
-
+	
 	<groupId>de.andrena.eclipse.filesearch</groupId>
-	<artifactId>de.andrena.eclipse.filesearch</artifactId>
+	<artifactId>de.andrena.eclipse.filesearch.updatesite</artifactId>
 	<version>1.0.0-SNAPSHOT</version>
-	<packaging>eclipse-test-plugin</packaging>
+	<packaging>eclipse-update-site</packaging>
 
 </project>

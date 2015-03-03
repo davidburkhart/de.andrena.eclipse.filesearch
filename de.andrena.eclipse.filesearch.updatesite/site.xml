@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/de.andrena.eclipse.filesearch.feature_1.0.0.qualifier.jar" id="de.andrena.eclipse.filesearch.feature" version="1.0.0.qualifier"/>
+</site>
